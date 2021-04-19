@@ -404,20 +404,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
             </Paragraph>
            
             
-            <b>4. Real Annotation - Once completing steps 1-3, you’re ready to start annotating!</b>
-            <br></br>
-            <br></br>
-            <Paragraph>
-            Please do the two following topics, download the annotation file at the end of each annotation and send it by email to Arie Cattan at <a href="mailto:ariec@allenai.org" target="_blank">ariec@allenai.org</a>. We will
-            analyze your annotation and come back to you soon!.
-            <br></br>
-            <br></br>
-            <ul>
-            <li><a href="https://nlp.biu.ac.il/~ariecattan/sci-coref-hypernym/annotation.html?id=malware" target="_blank">Malware Classification</a></li>
-                <li><a href="https://nlp.biu.ac.il/~ariecattan/sci-coref-hypernym/annotation.html?id=contextualized" target="_blank">Contextualized Embeddings</a></li>
-            </ul>
-            
-            </Paragraph>
+           
             
             <Box>
             You can annotate both the linking and the hierarchy together or alternate between these two tasks. 
