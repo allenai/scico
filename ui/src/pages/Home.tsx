@@ -270,7 +270,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                         We screen the annotators using the task of <em>faceted-search</em> as a motivation. Our tutorial
                         and guided annotation are shown in <a href='/screening'>Screening</a> and full annotation guidelines
                         are shown in <a href='/guidelines'>Annotation Guidelines</a>. 
-                        We extend <a href='https://www.aclweb.org/anthology/2020.emnlp-demos.27/' target="_blank">CoRefi (Bornstein et al., 2020)</a> with the ability to annotate hierarchy of clusters, as shown in <a href='/tool'>Tool Interface</a>.
+                        We extended <a href='https://www.aclweb.org/anthology/2020.emnlp-demos.27/' target="_blank">CoRefi (Bornstein et al., 2020)</a> with the ability to annotate hierarchy of clusters, as shown in <a href='/tool'>Tool Interface</a>.
 
                         <br></br>
                         
