@@ -280,7 +280,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
 
                    <Title level={4}>Code</Title>
                     <Paragraph>
-                        Code of the models: <a href='https://github.com/ariecattan/SciCo'>https://github.com/ariecattan/SciCo </a>
+                        Code for training models and evaluation: <a href='https://github.com/ariecattan/SciCo'>https://github.com/ariecattan/SciCo </a>
                     </Paragraph>
                     <Paragraph>
                         Code for the extended CoRefi: <a href='https://github.com/ariecattan/CoRefi'>https://github.com/ariecattan/CoRefi</a>
