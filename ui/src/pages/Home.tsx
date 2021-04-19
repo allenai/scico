@@ -5,10 +5,28 @@ import Alert from 'antd/es/alert';
 import Button from 'antd/es/button';
 import Input from 'antd/es/input';
 import LoadingOutlined from '@ant-design/icons/lib/icons/LoadingOutlined';
+import { List, Typography, Divider } from 'antd';
 
 import { solve, Answer, Query } from '../api';
-
+import {
+    Content
+} from '@allenai/varnish/components';
+import * as antd from 'antd';
+import {Select, Space, Card} from 'antd';
+const { Title, Paragraph, Text } = antd.Typography;
 const { TextArea } = Input;
+
+import { Row, Col } from 'antd';
+
+const team = [
+    'Arie Cattan',
+    'Sophie Johnson',
+    'Daniel Weld',
+    'Ido Dagan',
+    'Iz Beltagy',
+    'Doug Downey',
+    'Tom Hope'
+  ];
 
 /**
  * We use a state machine to capture the current state of the view. Since
@@ -213,55 +231,77 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
      * changes to the document as possible -- which can be an expensive process
      * and lead to slow interfaces.
      */
+
+    
+
+
     render() {
         return (
             <React.Fragment>
-                <p>
-                    Enter a question and answers below to see what answer our application selects.
-                </p>
-                <Form onSubmit={this.handleSubmit}>
-                    <InputLabel>Question:</InputLabel>
-                    <TextArea
-                        autoSize={{ minRows: 4, maxRows: 6 }}
-                        placeholder="Enter a question"
-                        value={this.state.query.question}
-                        required={true}
-                        onChange={this.handleQuestionChange}
-                    />
-                    <InputLabel>Answer 1:</InputLabel>
-                    <TextArea
-                        autoSize={{ minRows: 1, maxRows: 4 }}
-                        placeholder="Enter the first possible answer"
-                        required={true}
-                        value={this.state.query.choices[0]}
-                        onChange={this.handleFirstAnswerChange}
-                    />
-                    <InputLabel>Answer 2:</InputLabel>
-                    <TextArea
-                        autoSize={{ minRows: 1, maxRows: 4 }}
-                        placeholder="Enter the second possible answer"
-                        required={true}
-                        value={this.state.query.choices[1]}
-                        onChange={this.handleSecondAnswerChange}
-                    />
-                    <SubmitContainer>
-                        <SubmitButton type="primary">Submit</SubmitButton>
-                        {this.state.view === View.LOADING ? <LoadingOutlined /> : null}
-                    </SubmitContainer>
-                    {this.state.view === View.ERROR ? (
-                        <Alert
-                            type="error"
-                            message={this.state.error || 'Sorry, something went wrong.'}
-                        />
-                    ) : null}
-                    {this.state.view === View.ANSWER && this.state.answer ? (
-                        <Alert
-                            type="info"
-                            message="Our system answered:"
-                            description={`${this.state.answer.answer} (${this.state.answer.score}%)`}
-                        />
-                    ) : null}
-                </Form>
+               <Content main className="center"  >
+                   <Title level={4}>Abstract</Title>
+                    
+                   <Paragraph>
+                   Determining coreference of concept mentions across multiple documents is fundamental for natural language understanding. 
+                   Work on cross-document coreference resolution (CDCR) typically considers mentions of events in the news, 
+                   which do not often involve abstract technical concepts that are prevalent in science and technology. 
+                   These complex concepts take diverse or ambiguous forms and have many hierarchical levels of granularity (e.g., tasks and subtasks), posing challenges for CDCR. 
+                   We present a new task of <em>hiearchical</em> CDCR for concepts in scientific papers, with the goal of <em>jointly</em> inferring coreference clusters and hierarchy between them. 
+                   We create <b>SciCo</b>, an expert-annotated dataset for this task, which is 3X larger than the prominent ECB+ resource. 
+                   We find that tackling both coreference and hierarchy at once outperforms disjoint models, which we hope will spur development of joint models for <b>SciCo</b>.                       
+                   </Paragraph>
+
+                   <Paragraph>
+                       More details can be found in the paper: <br></br>
+                       <b>SCICO: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
+                       <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em>
+                   </Paragraph>
+
+                   <img src="/images/scico_teaser.png" className="center" width="50%" height="50%" />
+                   
+                   <Title level={4}>Data and Annotation</Title>
+                    <Paragraph>
+                    Click <a>here</a> to download the data.
+                    </Paragraph>
+
+                    
+                    <Paragraph>
+
+                        We screen the annotators using the task of <em>faceted-search</em> as a motivation. Our tutorial
+                        and guided annotation are shown in <a href='/screening'>Screening</a> and full annotation guidelines
+                        are shown in <a href='/guidelines'>Annotation Guidelines</a>. 
+                        We extend <a href='https://www.aclweb.org/anthology/2020.emnlp-demos.27/' target="_blank">CoRefi (Bornstein et al., 2020)</a> with the ability to annotate hierarchy of clusters, as shown in <a href='/tool'>Tool Interface</a>.
+
+                        <br></br>
+                        
+
+
+                    </Paragraph>
+
+                   <Title level={4}>Code</Title>
+                    <Paragraph>
+                        Code of the models: <a href='https://github.com/ariecattan/SciCo'>https://github.com/ariecattan/SciCo </a>
+                    </Paragraph>
+                    <Paragraph>
+                        Code for the extended CoRefi: <a href='https://github.com/ariecattan/CoRefi'>https://github.com/ariecattan/CoRefi</a>
+                    </Paragraph>
+
+                   <Title level={4}>Citation</Title>
+                   <Title level={4}>Team</Title>
+                   <Paragraph>
+                   <ul>
+                        <li>Arie Cattan</li>
+                        <li>Sophie Johnson</li>
+                        <li>Daniel Weld</li>
+                        <li>Ido Dagan</li>
+                        <li>Iz Beltagy</li>
+                        <li>Doug Downey</li>
+                        <li>Tom Hope</li>
+                    </ul>
+                   </Paragraph>
+                    
+                    
+               </Content>
             </React.Fragment>
         );
     }

@@ -1,6 +1,6 @@
 {
-    "appName": "skiff-template",
-    "contact": "reviz",
-    "team": "reviz",
+    "appName": "scico",
+    "contact": "ariec",
+    "team": "s2",
     "replicas": { "prod": 2 }
 }

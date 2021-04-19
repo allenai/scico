@@ -13,11 +13,15 @@ import styled from 'styled-components';
 import { RouteComponentProps } from 'react-router';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Header, Content, Footer, Layout } from '@allenai/varnish/components';
-import Menu from 'antd/es/menu';
+import { Menu } from 'antd';
 import { Link } from '@allenai/varnish-react-router';
+import { logos } from '@allenai/varnish/components';
 
 import Home from './pages/Home';
 import About from './pages/About';
+import Screening from './pages/Screening'
+import AnnotationGuidelines from './pages/Guidelines'
+import Tool from './pages/Tool'
 import { AppRoute } from './AppRoute';
 
 /**
@@ -31,10 +35,20 @@ const ROUTES: AppRoute[] = [
         component: Home,
     },
     {
-        path: '/about',
-        label: 'About',
-        component: About,
+        path: '/Screening',
+        label: 'Screening',
+        component: Screening
     },
+    {
+        path: '/guidelines',
+        label: 'Annotation Guidelines',
+        component: AnnotationGuidelines,
+    },
+    {
+        path: '/tool',
+        label: 'Tool Interface',
+        component: Tool,
+    }
 ];
 
 export default class App extends React.PureComponent<RouteComponentProps> {
@@ -42,19 +56,11 @@ export default class App extends React.PureComponent<RouteComponentProps> {
         return (
             <BrowserRouter>
                 <Route path="/">
-                    <Layout bgcolor="white">
+                <Layout bgcolor="white">
                         <Header>
                             <Header.Columns columns="auto 1fr auto">
-                                <Header.Logo label={<Header.AppName>Skiff</Header.AppName>}>
-                                    <SimpleLogo>
-                                        <span role="img" aria-label="Skiff Logo">
-                                            {
-                                                ['⛵️', '⚓️', '🐠', '🛶', '🐟', '🐙', '🐡'][
-                                                    Math.floor(Math.random() * 7)
-                                                ]
-                                            }
-                                        </span>
-                                    </SimpleLogo>
+                                <Header.Logo label={<Header.AppName>SciCo</Header.AppName>}>
+                                <logos.SemanticScholar />
                                 </Header.Logo>
                                 <span />
                                 <Header.MenuColumn>
