@@ -253,8 +253,13 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
 
                    <Paragraph>
                        More details can be found in the paper: <br></br>
-                       <b>SCICO: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
-                       <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em>
+                       <ul>
+                           <li><b>SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
+                           <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em>
+                       </li>
+                       </ul>
+                       {/* <b>SCICO: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
+                       <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em> */}
                    </Paragraph>
 
                    <img src="/images/scico_teaser.png" className="center" width="50%" height="50%" />
