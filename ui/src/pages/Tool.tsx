@@ -19,7 +19,7 @@ export default class Tool extends React.PureComponent {
 </p>
 <ol>
     <li>This mention belongs to an existing cluster: select the corresponding cluster on the cluster bank, or in the hierarchy, or click on any of its mentions in the text, then press Space. </li>
-    <li>This mention does not belong to any previous clusters: create a new cluster by pressing <Text keyboard>Alt</Text> + <Text keyboard>SPACE</Text> (MacOS) or <Text keyboard>Ctrl</Text> + <Text keyboard>SPACE</Text> (Windows) or clicking on the <Text keyboard>+</Text> in the cluster bank. Now that you have created a new cluster, annotate its relations in the hierarchy (if any).</li>
+    <li>This mention does not belong to any previous clusters: create a new cluster by pressing <Text keyboard>option</Text> + <Text keyboard>SPACE</Text> (MacOS) or <Text keyboard>Ctrl</Text> + <Text keyboard>SPACE</Text> (Windows) or clicking on the <Text keyboard>+</Text> in the cluster bank. Now that you have created a new cluster, annotate its relations in the hierarchy (if any).</li>
 </ol>
 After this assignment, the tool will show you automatically the next mention to assign until you have assigned all the candidate mentions. 
 </Paragraph>

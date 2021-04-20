@@ -13,7 +13,7 @@ import {
 } from '@allenai/varnish/components';
 import * as antd from 'antd';
 import {Select, Space, Card} from 'antd';
-const { Title, Paragraph, Text } = antd.Typography;
+const { Title, Paragraph, Text, Code } = antd.Typography;
 const { TextArea } = Input;
 
 import { Row, Col } from 'antd';
@@ -255,7 +255,8 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                        More details can be found in the paper: <br></br>
                        <ul>
                            <li><b>SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
-                           <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em>
+                           <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em><br></br>
+                           <em><a href='https://arxiv.org/abs/2104.08809' target="_blank">[preprint]</a></em>
                        </li>
                        </ul>
                        {/* <b>SCICO: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
@@ -266,14 +267,14 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                    
                    <Title level={4}>Data and Annotation</Title>
                     <Paragraph>
-                    Click <a>here</a> to download the data.
+                    Click <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> to download the data.
                     </Paragraph>
 
                     
                     <Paragraph>
 
                         We screen the annotators using the task of <em>faceted-search</em> as a motivation. Our tutorial
-                        and guided annotation are shown in <a href='/screening'>Screening</a> and full annotation guidelines
+                        and guided annotation are shown in <a href='/screening'>Annotators Onboarding</a> and full annotation guidelines
                         are shown in <a href='/guidelines'>Annotation Guidelines</a>. 
                         We extended <a href='https://www.aclweb.org/anthology/2020.emnlp-demos.27/' target="_blank">CoRefi (Bornstein et al., 2020)</a> with the ability to annotate hierarchy of clusters, as shown in <a href='/tool'>Tool Interface</a>.
 
@@ -291,7 +292,8 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                         Code for the extended CoRefi: <a href='https://github.com/ariecattan/CoRefi'>https://github.com/ariecattan/CoRefi</a>
                     </Paragraph>
 
-                   <Title level={4}>Citation</Title>
+                   {/* <Title level={4}>Citation</Title> */}
+                   
                    <Title level={4}>Team</Title>
                    <Paragraph>
                    <ul>
@@ -304,7 +306,9 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                         <li>Tom Hope</li>
                     </ul>
                    </Paragraph>
+                    <Text>
                     
+                    </Text>
                     
                </Content>
             </React.Fragment>

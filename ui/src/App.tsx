@@ -36,7 +36,7 @@ const ROUTES: AppRoute[] = [
     },
     {
         path: '/Screening',
-        label: 'Screening',
+        label: 'Annotators Onboarding',
         component: Screening
     },
     {
