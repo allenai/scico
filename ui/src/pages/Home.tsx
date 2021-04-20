@@ -13,7 +13,7 @@ import {
 } from '@allenai/varnish/components';
 import * as antd from 'antd';
 import {Select, Space, Card} from 'antd';
-const { Title, Paragraph, Text, Code } = antd.Typography;
+const { Title, Paragraph, Text } = antd.Typography;
 const { TextArea } = Input;
 
 import { Row, Col } from 'antd';
