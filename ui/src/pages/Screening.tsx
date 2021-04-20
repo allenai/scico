@@ -49,7 +49,7 @@ interface State {
     error?: string;
 }
 
-export default class Home extends React.PureComponent<RouteComponentProps, State> {
+export default class Screening extends React.PureComponent<RouteComponentProps, State> {
     constructor(props: RouteComponentProps) {
         super(props);
         this.state = {
