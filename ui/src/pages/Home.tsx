@@ -70,32 +70,32 @@ const columns = [
         width: '20'
     },
     {
-        // title: <b>Training</b>,
-        title: "Training",
+        title: <b>Training</b>,
+        // title: "Training",
         dataIndex: 'training',
         key: 'training',
         fixed: 'left',
         width: '10'
     },
     {
-        // title: <b>Validation</b>,
-        title: "Validation",
+        title: <b>Validation</b>,
+        // title: "Validation",
         dataIndex: 'validation',
         key: 'validation',
         fixed: 'left',
         width: '10'
     },
     {
-        // title: <b>Test</b>,
-        title: "Test",
+        title: <b>Test</b>,
+        // title: "Test",
         dataIndex: 'test',
         key: 'test',
         fixed: 'left',
         width: '10'
     },
     {
-        // title: <b>Total</b>,
-        title: "Total",
+        title: <b>Total</b>,
+        // title: "Total",
         dataIndex: 'total',
         key: 'total',
         fixed: 'left',
@@ -105,39 +105,40 @@ const columns = [
 
 const data = [
     {
-        // param: <b>Topics</b>,
-        param: "Topics",
+        param: <b>Topics</b>,
+        // param: "Topics",
         training: 221,
         validation: 100,
         test: 200,
         total: 521,
     },
     {
-        // param: <b>Documents</b>,
-        param: "Documents",
+        param: <b>Documents</b>,
+        // param: "Documents",
         training: 9013,
         validation: 4120,
         test: 8237,
         total: 20412,
     },
     {
-        // param: <b>Mentions</b>,
-        param: "Mentions",
+        param: <b>Mentions</b>,
+        // param: "Mentions",
         training: 10925,
         validation: 4874,
         test: 10423,
         total: 26222,
     },
     {
-        // param: <b>Clusters</b>,
-        param: "Clusters",
+        param: <b>Clusters</b>,
+        // param: "Clusters",
         training: 4080,
         validation: 1867,
         test: 3711,
         total: 9538,
     },
     {
-        param: "Relations",
+        param: <b>Relations</b>,
+        // param: "Relations",
         training: 2514,
         validation: 1747,
         test: 2379,
@@ -353,11 +354,10 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                     <Paragraph>
                     Click <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> to download the data.
                     </Paragraph>
+                    
 
-                    {/* <Paragraph>
-                        <Table  columns={columns} dataSource={data} mountNode bordered size="small"/>
-                    </Paragraph> */}
-
+                    <Table  columns={columns} dataSource={data} mountNode bordered size="small"/>
+                    
                     <Paragraph>
 
                         We screen the annotators using the task of <em>faceted-search</em> as a motivation. Our tutorial
