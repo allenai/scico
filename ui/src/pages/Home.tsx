@@ -103,28 +103,32 @@ const columns = [
 
 const data = [
     {
-        param: <b>Topics</b>,
+        // param: <b>Topics</b>,
+        param: "Topics",
         training: 221,
         validation: 100,
         test: 200,
         total: 521,
     },
     {
-        param: <b>Documents</b>,
+        // param: <b>Documents</b>,
+        param: "Documents",
         training: 9013,
         validation: 4120,
         test: 8237,
         total: 20412,
     },
     {
-        param: <b>Mentions</b>,
+        // param: <b>Mentions</b>,
+        param: "Mentions",
         training: 10925,
         validation: 4874,
         test: 10423,
         total: 26222,
     },
     {
-        param: <b>Clusters</b>,
+        // param: <b>Clusters</b>,
+        param: "Clusters",
         training: 4080,
         validation: 1867,
         test: 3711,
