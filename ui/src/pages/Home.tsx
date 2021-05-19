@@ -354,9 +354,9 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                     Click <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> to download the data.
                     </Paragraph>
 
-                    <Paragraph>
+                    {/* <Paragraph>
                         <Table  columns={columns} dataSource={data} mountNode bordered size="small"/>
-                    </Paragraph>
+                    </Paragraph> */}
 
                     <Paragraph>
 
