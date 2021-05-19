@@ -6,6 +6,7 @@ import Button from 'antd/es/button';
 import Input from 'antd/es/input';
 import LoadingOutlined from '@ant-design/icons/lib/icons/LoadingOutlined';
 import { List, Typography, Divider } from 'antd';
+import { Table, Tag} from 'antd';
 
 import { solve, Answer, Query } from '../api';
 import {
@@ -60,6 +61,83 @@ interface State {
     answer?: Answer;
     error?: string;
 }
+
+
+const columns = [
+    {
+        title: '',
+        dataIndex: 'param',
+        key: 'param',
+        fixed: 'left',
+        width: '20'
+    },
+    {
+        title: <b>Training</b>,
+        dataIndex: 'training',
+        key: 'training',
+        fixed: 'left',
+        width: '10'
+    },
+    {
+        title: <b>Validation</b>,
+        dataIndex: 'validation',
+        key: 'validation',
+        fixed: 'left',
+        width: '10'
+    },
+    {
+        title: <b>Test</b>,
+        dataIndex: 'test',
+        key: 'test',
+        fixed: 'left',
+        width: '10'
+    },
+    {
+        title: <b>Total</b>,
+        dataIndex: 'total',
+        key: 'total',
+        fixed: 'left',
+        width: '10'
+    },
+];
+
+const data = [
+    {
+        param: <b>Topics</b>,
+        training: 221,
+        validation: 100,
+        test: 200,
+        total: 521,
+    },
+    {
+        param: <b>Documents</b>,
+        training: 9013,
+        validation: 4120,
+        test: 8237,
+        total: 20412,
+    },
+    {
+        param: <b>Mentions</b>,
+        training: 10925,
+        validation: 4874,
+        test: 10423,
+        total: 26222,
+    },
+    {
+        param: <b>Clusters</b>,
+        training: 4080,
+        validation: 1867,
+        test: 3711,
+        total: 9538,
+    },
+    {
+        param: <b>Relations</b>,
+        training: 2514,
+        validation: 1747,
+        test: 2379,
+        total: 5981
+    }
+];
 
 export default class Home extends React.PureComponent<RouteComponentProps, State> {
     constructor(props: RouteComponentProps) {
@@ -270,7 +348,10 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                     Click <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> to download the data.
                     </Paragraph>
 
-                    
+                    <Paragraph>
+                        <Table  columns={columns} dataSource={data} mountNode bordered size="small"/>
+                    </Paragraph>
+
                     <Paragraph>
 
                         We screen the annotators using the task of <em>faceted-search</em> as a motivation. Our tutorial
