@@ -131,7 +131,7 @@ const data = [
         total: 9538,
     },
     {
-        param: <b>Relations</b>,
+        param: "Relations",
         training: 2514,
         validation: 1747,
         test: 2379,
