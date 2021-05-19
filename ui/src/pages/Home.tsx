@@ -4,9 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import Alert from 'antd/es/alert';
 import Button from 'antd/es/button';
 import Input from 'antd/es/input';
-import LoadingOutlined from '@ant-design/icons/lib/icons/LoadingOutlined';
-import { List, Typography, Divider } from 'antd';
-import { Table, Tag} from 'antd';
+import { Table} from 'antd';
 
 import { solve, Answer, Query } from '../api';
 import {
