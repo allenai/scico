@@ -72,28 +72,32 @@ const columns = [
         width: '20'
     },
     {
-        title: <b>Training</b>,
+        // title: <b>Training</b>,
+        title: "Training",
         dataIndex: 'training',
         key: 'training',
         fixed: 'left',
         width: '10'
     },
     {
-        title: <b>Validation</b>,
+        // title: <b>Validation</b>,
+        title: "Validation",
         dataIndex: 'validation',
         key: 'validation',
         fixed: 'left',
         width: '10'
     },
     {
-        title: <b>Test</b>,
+        // title: <b>Test</b>,
+        title: "Test",
         dataIndex: 'test',
         key: 'test',
         fixed: 'left',
         width: '10'
     },
     {
-        title: <b>Total</b>,
+        // title: <b>Total</b>,
+        title: "Total",
         dataIndex: 'total',
         key: 'total',
         fixed: 'left',
