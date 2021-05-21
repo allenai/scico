@@ -1,6 +1,6 @@
 {
     "appName": "scico",
     "contact": "ariec",
-    "team": "s2",
+    "team": "s2research",
     "replicas": { "prod": 2 }
 }
