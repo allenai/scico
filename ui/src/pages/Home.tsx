@@ -351,7 +351,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                    
                    <Title level={4}>Data and Annotation</Title>
                     <Paragraph>
-                    Click <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> to download the data.
+                        SciCo is available <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> under the <a href='https://www.apache.org/licenses/LICENSE-2.0'>Apache-2.0 License</a>.
                     </Paragraph>
 
                     {/* <Paragraph>
