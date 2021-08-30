@@ -340,7 +340,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                    <Paragraph>
                        More details can be found in the paper: <br></br>
                        <ul>
-                           <li><b><a href='https://arxiv.org/abs/2104.08809' target="_blank">SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</a></b><br></br>
+                           <li><b><a href='https://arxiv.org/abs/2104.08809' target="_blank">SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts</a></b><br></br>
                            <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope.</em><br></br>
                            <em>AKBC 2021.</em>
                        </li>
