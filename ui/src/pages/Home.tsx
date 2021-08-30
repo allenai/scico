@@ -326,21 +326,24 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                    <Title level={4}>Abstract</Title>
                     
                    <Paragraph>
-                   Determining coreference of concept mentions across multiple documents is fundamental for natural language understanding. 
+                   Determining coreference of concept mentions across multiple documents is a fundamental task in natural language understanding. 
                    Work on cross-document coreference resolution (CDCR) typically considers mentions of events in the news, 
-                   which do not often involve abstract technical concepts that are prevalent in science and technology. 
-                   These complex concepts take diverse or ambiguous forms and have many hierarchical levels of granularity (e.g., tasks and subtasks), posing challenges for CDCR. 
-                   We present a new task of <em>hiearchical</em> CDCR for concepts in scientific papers, with the goal of <em>jointly</em> inferring coreference clusters and hierarchy between them. 
-                   We create <b>SciCo</b>, an expert-annotated dataset for this task, which is 3X larger than the prominent ECB+ resource. 
-                   We find that tackling both coreference and hierarchy at once outperforms disjoint models, which we hope will spur development of joint models for <b>SciCo</b>.                       
+                   which seldom involve abstract technical concepts that are prevalent in science and technology. 
+                   These complex concepts take diverse or ambiguous forms and have many hierarchical levels of granularity (e.g., tasks and subtasks), 
+                   posing challenges for CDCR. We present a new task of <em>Hiearchical</em> CDCR (H-CDCR) with the goal of <em>jointly</em> inferring coreference 
+                   clusters and hierarchy between them. We create <b>SciCo</b>, an expert-annotated dataset for H-CDCR in scientific papers, 
+                   3X larger than the prominent ECB+ resource.
+                    We study strong baseline models that we customize for H-CDCR, and highlight challenges for future work.
+                  
                    </Paragraph>
 
                    <Paragraph>
                        More details can be found in the paper: <br></br>
                        <ul>
-                           <li><b>SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
+                           <li><b><a href='https://arxiv.org/abs/2104.08809' target="_blank">SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</a></b><br></br>
+                           {/* <li><b>SciCo: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br> */}
                            <em>Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey and Tom Hope</em><br></br>
-                           <em><a href='https://arxiv.org/abs/2104.08809' target="_blank">[preprint]</a></em>
+                           <em>AKBC 2021</a></em>
                        </li>
                        </ul>
                        {/* <b>SCICO: Hierarchical Cross-Document Coreference for Scientific Concepts (2021)</b> <br></br>
