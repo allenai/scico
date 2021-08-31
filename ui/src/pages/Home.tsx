@@ -327,7 +327,7 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                     
                    <Paragraph>
                    Determining coreference of concept mentions across multiple documents is a fundamental task in natural language understanding. 
-                   Work on cross-document coreference resolution (CDCR) typically considers mentions of events in the news, 
+                   Previous work on cross-document coreference resolution (CDCR) typically considers mentions of events in the news, 
                    which seldom involve abstract technical concepts that are prevalent in science and technology. 
                    These complex concepts take diverse or ambiguous forms and have many hierarchical levels of granularity (e.g., tasks and subtasks), 
                    posing challenges for CDCR. We present a new task of <em>Hiearchical</em> CDCR (H-CDCR) with the goal of <em>jointly</em> inferring coreference 
