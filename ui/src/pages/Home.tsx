@@ -8,12 +8,13 @@ import { Table} from 'antd';
 
 import { solve, Answer, Query } from '../api';
 import {
-    Content
+    Content, textStyles
 } from '@allenai/varnish/components';
 import * as antd from 'antd';
 import {Select, Space, Card} from 'antd';
 const { Title, Paragraph, Text } = antd.Typography;
 const { TextArea } = Input;
+const { InlineCode, Code } = textStyles;
 
 import { Row, Col } from 'antd';
 
@@ -353,8 +354,12 @@ export default class Home extends React.PureComponent<RouteComponentProps, State
                    
                    <Title level={4}>Data and Annotation</Title>
                     <Paragraph>
-                        SciCo is available <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> under the <a href='https://www.apache.org/licenses/LICENSE-2.0'>Apache-2.0 License</a>.
+                        SciCo is available <a href='https://nlp.biu.ac.il/~ariecattan/scico/data.tar' download>here</a> under the <a href='https://www.apache.org/licenses/LICENSE-2.0'>Apache-2.0 License</a>. 
+                        You can also download it using the <a href="https://huggingface.co/datasets/allenai/scico">huggingface dataset package</a> as follows:
                     </Paragraph>
+                    <Code>from datasets import load_dataset <br></br>
+                    scico = load_dataset("allenai/scico") </Code>
+
 
                     {/* <Paragraph>
                         <Table  columns={columns} dataSource={data} mountNode bordered size="small"/>
